@@ -1,0 +1,564 @@
+.container {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .taskSidebar {
+    display: block;
+    position: sticky;
+    border-right: 1px solid rgba(24, 28, 39, 0.1);
+    height: calc(100vh - 100px);
+    width: 256px;
+  }
+}
+
+.text {
+  font-family: Montserrat;
+  font-size: 14px;
+  line-height: 1.21;
+
+  color: #181c27;
+  letter-spacing: 0.04em;
+}
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .icon {
+    position: absolute;
+    top: 150px;
+    left: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .icon {
+    position: absolute;
+    top: 85px;
+    right: 40px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .icon {
+    position: absolute;
+    top: 215px;
+    right: 40px;
+  }
+}
+
+.iconBox {
+  border-bottom: 1px solid rgba(24, 28, 39, 0.1);
+  display: block;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .iconBox {
+    display: none;
+  }
+}
+
+.menuAdd {
+  position: relative;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .menuAdd {
+    position: fixed;
+    bottom: 50px;
+    left: 5%;
+  }
+}
+
+.addSprintText {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .addSprintText {
+    display: block;
+    margin: 0;
+    margin-top: 15px;
+  }
+}
+
+.taskWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .taskHeader {
+    width: 100%;
+    border-bottom: 1px solid rgba(24, 28, 39, 0.1);
+  }
+}
+
+.taskContainer {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .taskContainer {
+    padding: 0px 0px 0px 20px;
+  }
+}
+
+.taskPagination {
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.positionAddBtnTask {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.nameTaskAdd {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+  margin-bottom: 17px;
+  padding: 0px;
+}
+
+@media screen and (max-width: 767px) {
+  .nameTaskAdd {
+    padding-top: 40px;
+  }
+}
+
+.input {
+  padding: 5px;
+  border: none;
+  max-width: 320px;
+
+  border-bottom: none;
+  background: no-repeat bottom, 50% calc(100% - 1px);
+  background-size: 0 100%, 100% 100%;
+  background-image: linear-gradient(0deg, #ff6b08 2px, rgba(156, 39, 176, 0) 0);
+
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+@media screen and (max-width: 767px) {
+  .input {
+    font-size: 18px;
+    line-height: 1.22;
+
+    width: 100%;
+    padding-left: 45px;
+    position: absolute;
+    top: 150px;
+    right: 0;
+
+    background-image: linear-gradient(0deg, #ff6b08 2px, rgba(156, 39, 176, 0) 0),
+      linear-gradient(0deg, rgba(24, 28, 39, 0.2) 1px, hsla(0, 0%, 82%, 0) 0);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .input {
+    margin-left: 20px;
+    max-width: 280px;
+    font-size: 18px;
+    line-height: 1.22;
+
+    background-image: linear-gradient(0deg, #ff6b08 2px, rgba(156, 39, 176, 0) 0),
+      linear-gradient(0deg, rgba(24, 28, 39, 0.2) 1px, hsla(0, 0%, 82%, 0) 0);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .input {
+    font-size: 18px;
+    line-height: 1.22;
+
+    width: 150px;
+    padding-right: 35px;
+    position: absolute;
+    top: 215px;
+    right: 40px;
+
+    background-image: linear-gradient(0deg, #ff6b08 2px, rgba(156, 39, 176, 0) 0);
+  }
+}
+
+.input:focus {
+  outline: none;
+  background-size: 100% 100%, 100% 100%;
+  transition-duration: 0.3s;
+  box-shadow: none;
+}
+
+.label {
+  display: flex;
+}
+
+.headerContainerTask {
+  display: none;
+}
+
+@media screen and (min-width: 769px) {
+  .headerContainerTask {
+    display: block;
+  }
+}
+
+.item {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .item {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    padding: 20px 20px 20px 0px;
+  }
+}
+
+.sprint {
+  display: flex;
+  align-items: center;
+  max-width: 170px;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+.menuAdd {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sprint:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.secondLevelText {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  .secondLevelText {
+    display: block;
+    margin-left: 20px;
+  }
+}
+
+.list {
+  width: 107px;
+  height: 34px;
+
+  display: flex;
+}
+@media screen and (min-width: 768px) {
+  .list {
+    width: 98px;
+    height: 34px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .list {
+    width: 107px;
+    height: 34px;
+  }
+}
+
+.listItem {
+  margin-left: 93px;
+}
+@media screen and (min-width: 1024px) {
+  .listItem {
+    margin-left: 100px;
+  }
+}
+
+.listItemTask {
+  display: none;
+  margin-left: 40px;
+}
+
+@media screen and (min-width: 1024px) {
+  .listItemTask {
+    display: block;
+  }
+}
+
+.textTask {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.04em;
+
+  color: #181c27;
+}
+
+/* .containerTask {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .containerTask {
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .containerTask {
+  }
+}
+
+.penBtn {
+  display: block;
+  outline: none;
+  border: none;
+  width: 20px;
+  height: 20px;
+  background-image: url("./Pen.svg");
+  border-radius: 25px;
+}
+.penBtn:hover {
+  cursor: pointer;
+  background-image: url("./ActivBin.svg");
+}
+
+.taskItem {
+  position: relative;
+  list-style: none;
+  cursor: pointer;
+  transition: all 250ms linear;
+}
+
+.taskItem:hover {
+  transform: scale(1.02);
+}
+
+.task {
+  width: 280px;
+  height: 214px;
+  background: #ffffff;
+  box-shadow: 0px 6px 26px rgba(0, 5, 97, 0.1);
+  border-radius: 5px;
+  font-family: "Montserrat";
+  position: relative;
+  padding: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .task {
+    width: 215px;
+    height: 190px;
+    padding: 15px 20px 20px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .task {
+    width: 270px;
+    height: 215px;
+    padding: 20px 30px 30px;
+  }
+}
+
+.taskButton {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url("./bin.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  background-color: transparent;
+  transition: all 500ms linear;
+}
+
+.card__button:hover {
+  background-image: url("./ActivBin.svg");
+}
+
+/* Оформление тасок */
+.blokTasks {
+  width: 100%;
+  position: relative;
+  background: #ffffff;
+  box-shadow: 0px 6px 26px rgba(0, 5, 97, 0.1);
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+  .blokTasks {
+    width: 216px;
+    height: 284px;
+    margin: 20px;
+    flex-basis: calc((100% - 2 * 10px) / 2);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .blokTasks {
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin: 10px;
+  }
+}
+
+.blokTasksTitle {
+  width: 100%;
+
+  font-family: Montserrat Medium;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid rgba(24, 28, 39, 0.2);
+  padding-bottom: 8px;
+  color: #181c27;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 1024px) {
+  .blokTasksTitle {
+    display: flex;
+    width: 170px;
+    margin-right: 50px;
+  }
+}
+
+.taskDelBtn {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url("./bin.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  background-color: transparent;
+  transition: all 500ms linear;
+}
+
+.taskDelBtn:hover {
+  background-image: url("./ActivBin.svg");
+}
+
+.taskLabel {
+  display: flex;
+  justify-self: stretch;
+  font-family: Montserrat;
+  font-size: 10px;
+  line-height: 12px;
+  align-items: center;
+  letter-spacing: 0.04em;
+
+  color: #000000;
+
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .taskLabel {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+.taskLabelText {
+}
+@media screen and (min-width: 768px) {
+  .taskLabelText {
+    display: block;
+    width: 98px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .taskLabelText {
+    display: none;
+  }
+}
+
+.taskValue {
+  display: block;
+  margin-left: auto;
+}
+@media screen and (min-width: 1024px) {
+  .taskValue {
+    width: 100px;
+    margin-right: 100px;
+  }
+}
+.taskInput {
+  display: block;
+  width: 60px;
+  outline: transparent;
+
+  margin-bottom: 10px;
+  border-color: transparent;
+  border-bottom: 1px solid rgba(24, 28, 39, 0.2);
+  background-color: #ffffff;
+
+  font-family: Montserrat;
+  font-size: 14px;
+  line-height: 17px;
+  align-items: center;
+  text-align: right;
+  letter-spacing: 0.04em;
+
+  color: #000000;
+
+  margin-left: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .taskInput {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .taskInput {
+    margin-right: 100px;
+    text-align: start;
+  }
+}
+
+.positionInput {
+  display: flex;
+}
+
+.taskAdd {
+  position: fixed;
+  background-color: green;
+}

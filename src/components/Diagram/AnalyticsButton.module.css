@@ -1,0 +1,52 @@
+.analyticsBtn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: #ff6b08;
+  transition: all 250ms linear;
+  position: fixed;
+  left: 10%;
+  transform: translateX(-10%);
+  bottom: 20px;
+}
+
+.analyticsBtn:hover,
+.analyticsBtn:focus {
+  box-shadow: 0px 3px 4px rgb(255 107 8 / 50%);
+  transform: scale(1.2);
+  transition: all 250ms linear;
+}
+
+
+
+.analyticsIcon {
+  width: 22px;
+  height: 22px;
+}
+
+.analyticsBtn:hover {
+  box-shadow: 0px 3px 4px rgba(255, 107, 8, 0.5);
+  transform: scale(1.2);
+  transition: all 250ms linear;
+}
+
+
+@media screen and (min-width: 768px) {
+  .analyticsBtn {
+    display: none;
+  }
+} 
+@media screen and (min-width: 1024px) {
+  .analyticsBtn {
+    display: block;
+    right: 10%;
+    left: auto;
+    position: fixed;
+    bottom: 64px;
+    transform: translateX(-10%);
+  }
+}
